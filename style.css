@@ -1,0 +1,638 @@
+@charset "utf-8";
+*{
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+}
+select {
+    -moz-appearance: menulist;
+    -webkit-appearance: menulist;
+}
+select::-ms-expand {
+    display: block;
+}
+html, body {
+    overflow-x: hidden;
+    font-size: 16px;
+}
+/*header css*/
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 75px;
+    padding: 0 30px;
+    transition: all 0.3s;
+    z-index: 10;
+}
+.header img{
+    width: 70%;
+}
+.nav-list {
+    display: flex;
+    padding-left: 60px;
+    list-style: none;
+}
+.nav-item:not(:last-child) {
+    margin-right: 78px;
+}
+.nav-item {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-size: 0.875rem;
+}
+.nav-link {
+    position: relative;
+    display: inline-block;
+    color: #001E5A;
+    font-size: 18px;
+}
+.navigation{
+    margin-top: 15px;
+}
+a {
+    transition: 0.3s;
+    text-decoration: none;
+}
+.nav-link {
+    text-decoration: none; /* 初期状態で下線なし */
+    color: inherit; /* 必要に応じて文字色を設定 */
+    position: relative;
+}
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    left: 0;
+    bottom: -2px; /* 下線の位置を調整 */
+    transition: width 0.3s ease;
+}
+.nav-link:hover::after {
+    width: 100%;
+}
+/*mv  css*/
+.mv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 675px;
+    background-image: url(../img/グループ4.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+}
+.mv__titleArea {
+    position: absolute;
+    top: 33%;
+    display: flex;
+    justify-content: center;
+    margin-right: 18%;
+    color: #fff;
+    transform: translateY(-48%);
+    width: 70%;
+}
+.mv__titleArea img{
+    width: 100%;
+}
+.anim-box {
+    opacity: 0;
+    transform: translateX(-90vh); /* 左から始める */
+    transition: all 0.3s ease;
+}
+
+.slidein.is-animated {
+    animation: slideIn 1.2s ease-out forwards;
+}
+@keyframes slideIn {
+    0% {
+        transform: translateX(-80vh);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0); /* 元の位置に戻る */
+        opacity: 1;
+    }
+}
+.mv2 {
+    display: flex;
+    align-items: center;     
+    justify-content: center;
+    background-image: url(../img/グループ52.png);
+    height: 1016px;
+    position: relative;
+    background-size: cover;
+    background-position: 50% 100%;
+}
+.mv__title2{
+    text-align: center;
+    margin-top: -50%;
+    font-size: 40px;
+    font-family: "HGSSoeiKakugothicUB";
+    font-weight: 600;
+}
+.anim-box2 {
+    opacity: 0;
+    transform: translateY(80px); /* 下からずらしておく */
+    transition: opacity 1.2s ease, transform 1.2s ease;
+}
+.slidein2.is-animated2 {
+    opacity: 1;
+    transform: translateY(0); /* 元の位置へ戻る */
+}
+.mv2-text{
+    text-align: center;
+    margin-top: 70px;
+    height: 28px;
+    line-height: 2;
+    font-size: 21px;
+}
+.l-section{
+    margin-top: 20%;
+}
+.l-inner {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+/* service css*/
+.service-heading-title {
+    line-height: 1.1;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #000;
+    font-size: 50px;
+    font-weight: 500;
+    font-family: 'Open Sans', sans-serif;
+}
+.service-heading-title-sub {
+    display: block;
+    margin-top: 5px;
+    letter-spacing: 0.05em;
+    font-size: 25px;
+    font-weight: 400;
+}
+.p-service__body {
+    padding-bottom: 3%;
+}
+.p-service__heading {
+    text-align: center;
+    margin-bottom: 70px;
+}
+.service-wrapper-service3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.service-wrapper {
+    margin-bottom: -30px;
+}
+.service-wrapper-service3 .service-card {
+    width: 20%;
+    margin-left: 5%;
+    margin-right: 6%;
+}
+.service-wrapper .service-card {
+    margin-bottom: 30px;
+}
+.service-img-wrapper {
+    margin-bottom: 15px;
+}
+.service-img {
+    width: 100%;
+    height: auto;
+}
+.service__body {
+    color: #333;
+}
+.service-body {
+    display: flex;
+    flex-direction: column;
+}
+.service-title {
+    font-weight: 600;
+    line-height: 1;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 26px;
+}
+/* 営業所の説明 css*/
+.about-body{
+    background-color: #F0F0F0;
+    margin-top: 25%;
+}
+.about-box-img-wrapper img {
+    max-width: 100%;
+    width: 53%;
+    height: auto;
+    vertical-align: bottom;
+}
+.about-box-desc {
+    width: 50%;
+    margin-top: 4%;
+    position: absolute;
+    right: 0; /* もしくは調整して、画面外に出ない数値に */
+    margin-left: 0; /* マイナス値は避ける */
+    background-color: #fff;
+}
+.about-box {
+    position: relative;
+    display: flex;
+}
+.about-box-reverse {
+    position: relative;
+    display: flex;
+    justify-content: right;
+    margin-top: 7%;
+}
+.about-box-img-wrapper{
+    width: 100%;
+}
+.about-box-img-wrapper2{
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 7%;
+}
+.about-box-img-wrapper2 img{
+    width: 53%;
+}
+.about-box-desc {
+    position: absolute;
+    right: 1%;
+    margin: 0;
+    padding: 2% 0 0 2%;
+    top: 18%;
+    width: 52%;
+}
+.about-box-reverse .about-box-desc {
+    left: 2%;
+    position: absolute;
+    top: 22%;
+}
+.about-box-reverse-inner{
+    background-color: #2364AA;
+    height: 470px;
+    margin: 15% 0 22%;
+}
+.about-heading-title{
+    font-size: 250%;
+    font-weight: 600;
+}
+.p-about-heading{
+    margin-bottom: 2%;
+}
+.about-heading-title-sub {
+    display: block;
+    letter-spacing: 0.01em;
+    color: #646464;
+    font-size: 60%;
+    font-family: ゴシック;
+}
+.about-box-text{
+    color: #646464;
+    font-size: 110%;
+    line-height: 1.5;
+    font-family: "ゴシック";
+    padding-bottom: 4%;
+    margin-bottom: 9%;
+}
+.about-box-text2{
+    color: #646464;
+    font-size: 115%;
+    line-height: 1.5;
+    font-family: "ゴシック";
+    padding-bottom: 3%;
+}
+.about-box-desc2 {
+    margin-top: 4%;
+    margin-left: -6%;
+    background-color: #fff;
+}
+.about-box-desc2 {
+    position: absolute;
+    right: 2%;
+    margin: 0;
+    padding: 2% 3%;
+    width: 52%;
+}
+.about-box-reverse .about-box-desc2 {
+    left: 1%;
+    position: absolute;
+    top: 30%;
+}
+.about-box-desc3 {
+    margin-top: 4%;
+    position: absolute;
+    right: 0; /* もしくは調整して、画面外に出ない数値に */
+    margin-left: 0; /* マイナス値は避ける */
+    background-color: #fff;
+}
+.about-box-desc3 {
+    position: absolute;
+    right: 1%;
+    margin: 0;
+    padding: 3%;
+    top: 18%;
+}
+.about-box .about-box-desc3 {
+    position: absolute;
+    right: 1%;
+    margin: 0;
+    padding: 3%;
+    top: 18%;
+    width: 52%;
+}
+.about-box-text3{
+    color: #646464;
+    font-size: 110%;
+    line-height: 1.5;
+    font-family: "ゴシック";
+    padding-bottom: 4%;
+    margin-bottom: 7%;
+}
+.demoTxt {
+    display: block;
+    opacity:0;
+}
+.demoTxt span {
+    opacity: 0;
+    -webkit-transition: .6s ease-in-out;
+    transition: .6s ease-in-out;
+}
+/* contact css*/
+.contact{
+    margin-top: 20%;
+}
+.contact-inner{
+    max-width: 100%;
+    align-items: center;
+    padding-bottom: 10%;
+}
+.contact-heading-title{
+    line-height: 1.1;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #000;
+    font-size: 50px;
+    font-weight: 500;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    margin-top: 0;
+    padding-bottom: 3%;
+}
+.contact-heading-title-sub {
+    display: block;
+    letter-spacing: 0.1em;
+    font-size: 24px;
+    font-weight: 400;
+}
+form {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 60%;
+}
+select, input, textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 1em 10px;
+    font-size: 1rem;
+    margin-bottom: 1em;
+    border-radius: 0;
+    background-color: #fff;
+    color: #333;
+    font-family: inherit;
+}
+::placeholder {
+    color: #aaa;
+    font-size: 20px;
+}
+.row {
+    display: flex;
+    gap: 1em;
+}
+.row input {
+    width: 100%;
+}
+  textarea {
+    resize: vertical;
+    height: 200px;
+  }
+  button {
+    margin-top: 1em;
+    padding: 2% 5%;
+    width: 250px;
+    border: none;
+    background-color: #444;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  .button-p{
+    text-align: center;
+    display: flex;
+    margin: 0 auto;
+  }
+.confirmButton{
+    display: flex;
+    margin: 5% auto;
+}
+button:hover {
+    background-color: #222;
+}
+.error {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 1%;
+    margin-bottom: 2%;
+}
+.row-name{
+    width: 100%;
+}
+.row-tel{
+    width: 100%;
+    display: block;
+}
+  /* company css*/
+.company{
+    background-image: url(../img/グループ7.png);
+    background-size: cover;
+    background-position: center;
+    position: sticky;
+}
+.company-inner{
+    max-width: 63%;
+    align-items: center;
+    margin: auto;
+    padding-bottom: 4.3%;
+}
+.company-heading-title {
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #000;
+    font-size: 50px;
+    font-weight: 500;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    padding-top: 7%;
+    padding-bottom: 3%;
+}
+.company-heading-title-sub {
+    display: block;
+    margin-top: 5px;
+    letter-spacing: 0.03em;
+    font-size: 28px;
+    font-weight: 400;
+}
+dl {
+    display: flex;
+    flex-wrap: wrap;
+    border-top: solid 1px #c8c8c8;
+    background-color: #fff;
+    padding: 5% 4% 0;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    position: sticky;
+}
+dt {
+    width: 25%;
+    border-bottom: solid 1px #c8c8c8;
+    padding: 3% 4%;
+    font-size: 24px;
+    font-family:  "游ゴシック体";
+}
+dd {
+    width: 75%;
+    border-bottom: solid 1px #c8c8c8;
+    padding: 3% 4%;
+    line-height: 2;
+    font-size: 24px;
+    font-family:  "游ゴシック体";
+    font-family: Medium;
+}
+.dd-text{
+    display: flex;
+}
+.dt-text{
+    border-style: none;
+    padding-bottom: 10%;
+}
+dd:last-child{
+    border-style: none;
+    padding-bottom: 10%;
+}
+dd:nth-child(3) {
+    background: #ef9a9a;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+}
+footer p{
+    font-size: 20px;
+    /* UI Properties */
+    text-align: left;
+    letter-spacing: 0px;
+    color: #505050;
+    opacity: 1;
+}
+@media (min-width: 2560px) {
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100px;
+        padding: 0 30px;
+        transition: all 0.3s;
+        z-index: 10;
+    }
+    .header img{
+        width: 100%;
+    }
+    .nav-link {
+        font-size: 180%;
+    }
+    .navigation{
+        margin-right: 12%;
+    }
+    .nav-item:not(:last-child) {
+        margin-right: 20%;
+    }
+    .mv {
+        height: 880px;
+    }
+    .mv__titleArea {
+        top: 33%;
+        margin-right: 27%;
+        transform: translateY(-48%);
+
+    }
+    .company-heading-title {
+        padding: 9% 0 0% 0;
+    }
+    .mv__titleArea img {
+        width: 133%;
+    }
+    .mv__title2{
+        font-size: 60px;
+    }
+    .mv2-text{
+        font-size: 30px;
+    }
+    .service-title {
+        font-size: 30px;
+    }
+    .service-heading-title-sub {
+        display: block;
+        margin-top: 5px;
+        letter-spacing: 0.05em;
+        font-size: 28px;
+    }
+    .about-heading-title {
+        font-size: 300%;
+    }
+    .about-heading-title-sub {
+        font-size: 63%;
+    }
+    .about-box-text {
+        font-size: 160%;
+    }
+    .about-box-text2 {
+        font-size: 160%;
+    }
+    .about-box-text3 {
+        font-size: 160%;
+    }
+    select, input, textarea {
+        font-size: 170%;
+    }
+    .confirmButton{
+        font-size: 170%;
+    }
+    button {
+        width: 300px;
+    }
+    .company-inner {
+        max-width: 70%;
+        align-items: center;
+        margin: auto;
+        padding-top: 2%;
+        padding-bottom: 4%;
+    }
+    dl {
+        margin-top: 4%;
+    }
+    dt {
+        font-size: 200%;
+    }
+    dd {
+        line-height: 2.4;
+        font-size: 200%;
+    }
+}
