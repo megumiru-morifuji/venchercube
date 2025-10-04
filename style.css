@@ -689,6 +689,11 @@ footer p{
 
 /* 750px以下でハンバーガーメニュー化 */
 @media screen and (max-width: 751px) {
+
+
+    .header{
+        padding-left:25px;
+    }
   
   /* ハンバーガーボタンを表示 */
   .hamburger-btn {
@@ -750,6 +755,8 @@ footer p{
   .about-box{
     flex-direction: column;
     position: static;
+    background-color: #2364AA;
+    padding-top: 5rem;
   }
 
   .about-box-desc,.about-box-desc2{
@@ -757,6 +764,10 @@ footer p{
     width:auto;
     padding:8%;
   }
+
+  .about-box-reverse .about-box-desc2 {
+    position: static;
+}
 
   .about-box-img-wrapper2{
     flex-direction: column;
@@ -772,6 +783,23 @@ footer p{
   .about-box-img-wrapper2 img {
     width: auto;
 }
+
+.about-box-reverse-inner {
+    
+    margin: 15% 0 88%;
+}
+
+.about-box-desc3{
+    position: static!important;
+    padding:8%!important;
+    width: auto!important;
+}
+
+.about-body {
+    
+    padding-bottom: 21%;
+}
+ 
 
   /* サービス欄 */
     .p-service__body {
