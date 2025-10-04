@@ -14,6 +14,13 @@
 <body>
     <header id="header" class="header">
         <h1 class="site-title"><a href="index.html"><img src="img/Vt_logo.svg" alt="Siite-title" loading="lazy"></a></h1>
+        <!-- ↓ここから追加 -->
+        <button class="hamburger-btn" aria-label="メニュー" aria-expanded="false">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+        <!-- ↑ここまで追加 -->
         <nav class="navigation">
             <ul class="nav-list" id="page-link">
                 <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
@@ -399,6 +406,25 @@
             document.getElementById('resultMessage').innerHTML = '<p style="color: red;">送信中にエラーが発生しました。</p>';
             console.error(err);
         });
+    });
+
+    // ハンバーガーメニューの開閉
+    document.querySelector('.hamburger-btn').addEventListener('click', function() {
+    this.classList.toggle('is-active');
+    document.querySelector('.navigation').classList.toggle('is-open');
+    
+    // aria-expanded属性の切り替え
+    const isExpanded = this.getAttribute('aria-expanded') === 'true';
+    this.setAttribute('aria-expanded', !isExpanded);
+    });
+
+    // メニューリンクをクリックしたらメニューを閉じる
+    document.querySelectorAll('.nav-link').forEach(function(link) {
+    link.addEventListener('click', function() {
+        document.querySelector('.hamburger-btn').classList.remove('is-active');
+        document.querySelector('.navigation').classList.remove('is-open');
+        document.querySelector('.hamburger-btn').setAttribute('aria-expanded', 'false');
+    });
     });
 </script>
 <script>console.log("megumiru.morifuji@gmail.com");</script>
