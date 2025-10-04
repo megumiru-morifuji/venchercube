@@ -663,7 +663,47 @@ footer p{
   border-radius: 2px;
 }
 
-@media screen and (max-width: 1090px) {
+@media screen and (max-width: 1500px) {
+    .about-box-desc{
+        padding:2%
+    }
+
+    .about-heading-title{
+        font-size:230%;
+    }
+    
+    .about-box-text{
+    font-size: 105%;
+    }
+
+}
+
+@media screen and (max-width: 1280px) {
+    .mv__titleArea img {
+    width: 94%;}
+
+}
+
+@media screen and (max-width: 1091px) {
+
+    .mv__titleArea{
+        margin-right:4%;
+    }
+    
+    .mv__titleArea img{
+        width: 83%;
+    }
+
+    .nav-link{
+        font-size:17px;
+    }
+    .mv__title2{
+        font-size:27px;
+    }
+
+    .mv2-text{
+        font-size:19px;
+    }
     
     .service-title{
         font-size:20px;
@@ -684,6 +724,15 @@ footer p{
     .p-service__body {
         padding: 0 4%;
     
+    }
+
+    form {
+    
+        max-width: 70%;
+    }
+
+    .company-inner{
+        max-width: 70%;
     }
 } 
 
@@ -764,11 +813,11 @@ footer p{
     flex-direction: column;
     position: static;
     
-    padding-top: 5rem;
   }
 
   .about-box1{
     background-color: #2364AA;
+    padding-top: 5rem;
   }
 
   .about-box-desc,.about-box-desc2{
@@ -836,10 +885,11 @@ footer p{
     background-color: transparent;
 }
 
-/* 700px以下でハンバーガーメニュー化 */
-/* @media screen and (max-width: 700px) {
+
+ @media screen and (max-width: 709px) {
     .service-wrapper {
+        flex-direction: column;
 
     }
 
-} */
+}
