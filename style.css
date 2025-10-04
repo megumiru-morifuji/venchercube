@@ -694,6 +694,14 @@ footer p{
     .header{
         padding-left:25px;
     }
+
+    .mv__title2{
+        font-size:31px;
+    }
+
+    .mv2-text{
+        font-size:19px;
+    }
   
   /* ハンバーガーボタンを表示 */
   .hamburger-btn {
@@ -755,8 +763,12 @@ footer p{
   .about-box{
     flex-direction: column;
     position: static;
-    background-color: #2364AA;
+    
     padding-top: 5rem;
+  }
+
+  .about-box1{
+    background-color: #2364AA;
   }
 
   .about-box-desc,.about-box-desc2{
@@ -805,6 +817,18 @@ footer p{
     .p-service__body {
         padding: 0 3%;
     }
+
+    .service-title {
+        font-size: 18px;
+    }
+
+    .service-heading-title{
+        font-size:42px;
+    }
+    .service-heading-title-sub{
+        font-size: 23px;
+    }
+ 
  
 }
 
