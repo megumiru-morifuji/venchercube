@@ -736,6 +736,18 @@ footer p{
     }
 } 
 
+@media screen and (max-width: 981px) {
+    .nav-item:not(:last-child) {
+    margin-right: 39px;
+    }
+
+    .nav-link{
+        font-size: 16px;
+    }
+
+}
+
+
 /* 750px以下でハンバーガーメニュー化 */
 @media screen and (max-width: 751px) {
 
@@ -877,6 +889,29 @@ footer p{
     .service-heading-title-sub{
         font-size: 23px;
     }
+/* 
+    お問い合わせ欄 */
+    form {
+        max-width: 88%;
+    }
+
+    .contact-heading-title{
+        font-size: 241%;
+    }
+
+    .contact-heading-title-sub{
+        font-size: 22px;
+    }
+
+    form button{
+        font-size: 18px;
+    }
+
+    select, input, textarea {
+ 
+    font-size: 15px;
+}
+
  
  
 }
@@ -890,6 +925,14 @@ footer p{
     .service-wrapper {
         flex-direction: column;
 
+    }
+
+    .service-wrapper-service3 .service-card {
+        
+        width: 48%;
+        min-width: 200px;
+        margin: 0 auto;
+        margin-bottom: 5rem;
     }
 
 }
