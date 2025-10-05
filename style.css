@@ -680,7 +680,24 @@ footer p{
 
 @media screen and (max-width: 1280px) {
     .mv__titleArea img {
-    width: 94%;}
+    width: 94%;
+    }
+
+    .about-heading-title {
+        font-size: 208%;
+    }
+
+    .about-box-text,.about-box-text2,.about-box-text3 {
+        font-size: 98%;
+    }
+
+    .company dt,.company dd{
+        font-size:127%;
+    }
+
+    .company-inner{
+        max-width: 73%;
+    }
 
 }
 
@@ -728,11 +745,28 @@ footer p{
 
     form {
     
-        max-width: 70%;
+        max-width: 80%;
     }
 
     .company-inner{
-        max-width: 70%;
+        max-width: 80%;
+    }
+
+    .contact-heading-title{
+        font-size:41px;
+    }
+
+    .contact-heading-title-sub{
+        font-size:22px;
+    }
+
+    ::placeholder {
+    
+    font-size: 17px;
+    }
+
+    form button{
+        font-size: 17px;
     }
 } 
 
@@ -872,7 +906,15 @@ footer p{
     
     padding-bottom: 21%;
 }
- 
+
+.about-heading-title {
+        font-size: 188%;
+}
+
+.about-box-text,.about-box-text2,.about-box-text3 {
+    font-size: 97%;
+    margin-top: 3rem!important;
+}
 
   /* サービス欄 */
     .p-service__body {
@@ -883,12 +925,14 @@ footer p{
         font-size: 18px;
     }
 
-    .service-heading-title{
-        font-size:42px;
+    .service-heading-title,.company-heading-title{
+        font-size:227%;
     }
-    .service-heading-title-sub{
-        font-size: 23px;
+    .service-heading-title-sub,.company-heading-title-sub{
+        font-size: 20px;
     }
+
+
 /* 
     お問い合わせ欄 */
     form {
@@ -896,11 +940,19 @@ footer p{
     }
 
     .contact-heading-title{
-        font-size: 241%;
+        font-size: 227%;
     }
 
     .contact-heading-title-sub{
-        font-size: 22px;
+        font-size: 20px;
+    }
+
+    .company-inner dd,.company-inner dt{
+        font-size:112%;
+    }
+
+        .company-inner {
+        max-width: 93%;
     }
 
     form button{
@@ -910,6 +962,11 @@ footer p{
     select, input, textarea {
  
     font-size: 15px;
+    }
+
+    ::placeholder {
+    
+    font-size: 16px;
 }
 
  
@@ -935,4 +992,21 @@ footer p{
         margin-bottom: 5rem;
     }
 
+}
+
+@media screen and (max-width: 600px) {
+
+    form button {
+   
+    width:200px;
+}
+}
+
+@media screen and (max-width: 560px) {
+
+    form .row {
+   
+    flex-direction: column;
+    gap:0;
+}
 }
