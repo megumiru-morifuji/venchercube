@@ -663,6 +663,13 @@ footer p{
   border-radius: 2px;
 }
 
+@media screen and (max-width: 1601px) {
+ .company-inner dd,.company-inner dt{
+        font-size:16px;
+    }
+
+}
+
 @media screen and (max-width: 1500px) {
     .about-box-desc{
         padding:2%
@@ -691,15 +698,27 @@ footer p{
         font-size: 98%;
     }
 
-    .company dt,.company dd{
+    /* .company dt,.company dd{
         font-size:127%;
-    }
+    } */
 
     .company-inner{
         max-width: 73%;
     }
 
 }
+
+@media screen and (max-width: 1150px){
+    .about-heading-title {
+        font-size: 28px;
+    }
+
+    .about-box-text, .about-box-text2, .about-box-text3 {
+        
+        font-size: 16px;
+    }
+}
+
 
 @media screen and (max-width: 1091px) {
 
@@ -754,6 +773,7 @@ footer p{
 
     .contact-heading-title{
         font-size:41px;
+        padding-bottom: 2rem;
     }
 
     .contact-heading-title-sub{
@@ -770,6 +790,8 @@ footer p{
     }
 } 
 
+
+
 @media screen and (max-width: 981px) {
     .nav-item:not(:last-child) {
     margin-right: 39px;
@@ -781,6 +803,11 @@ footer p{
 
 }
 
+@media screen and (max-width: 901px) {
+    .company dd{
+        padding-left:0;
+    }
+}
 
 /* 750px以下でハンバーガーメニュー化 */
 @media screen and (max-width: 751px) {
@@ -947,9 +974,7 @@ footer p{
         font-size: 20px;
     }
 
-    .company-inner dd,.company-inner dt{
-        font-size:112%;
-    }
+    
 
         .company-inner {
         max-width: 93%;
@@ -977,6 +1002,22 @@ footer p{
     background-color: transparent;
 }
 
+@media screen and (max-width: 701px) {
+    .mv__title2 {
+        
+        font-size: 149%;
+    }
+
+        .mv2-text {
+       
+        font-size: 100%;
+    }
+
+    .dd-text{
+        flex-direction: column;
+    }
+
+}
 
  @media screen and (max-width: 709px) {
     .service-wrapper {
@@ -992,21 +1033,67 @@ footer p{
         margin-bottom: 5rem;
     }
 
+    footer p{
+        font-size:16px;
+    }
+
 }
 
 @media screen and (max-width: 600px) {
 
+    .service-heading-title, .company-heading-title {
+        font-size: 27px;
+    }
+
+    .service-heading-title-sub, .company-heading-title-sub{
+        font-size: 18px;
+    }
+
     form button {
    
-    width:200px;
-}
+        width:200px;
+   }
+
+   .about-heading-title {
+        font-size: 160%;
+    }
+
+    .about-box-text, .about-box-text2, .about-box-text3 {
+    
+        font-size: 15px;
+    }
 }
 
 @media screen and (max-width: 560px) {
+    .company-inner dd, .company-inner dt {
+        font-size: 14px;
+    }
+    
 
     form .row {
    
     flex-direction: column;
     gap:0;
 }
+
+    .mv__titleArea2{
+        padding:0 2%;
+    }
+
+    .mv__title2 {
+        font-size: 137%;
+    }
+
+    .mv2-text{
+        font-size: 90%;
+        white-space: nowrap;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .mv2-text {
+        font-size: 16px;
+       white-space: normal;
+        padding: 6%;
+    }
 }
