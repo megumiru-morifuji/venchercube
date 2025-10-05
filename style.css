@@ -1041,6 +1041,12 @@ footer p{
 
 @media screen and (max-width: 600px) {
 
+    ::placeholder {
+        font-size:16px;
+    }
+    
+    
+
     .service-heading-title, .company-heading-title {
         font-size: 27px;
     }
