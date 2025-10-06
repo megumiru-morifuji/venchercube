@@ -15,6 +15,12 @@ html, body {
     overflow-x: hidden;
     font-size: 16px;
 }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Hiragino Kaku Gothic ProN",
+               "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
+}
+
 /*header css*/
 .header {
     display: flex;
@@ -132,7 +138,7 @@ a {
     text-align: center;
     margin-top: -50%;
     font-size: 40px;
-    font-family: "HGSSoeiKakugothicUB";
+    /* font-family: "HGSSoeiKakugothicUB"; */
     font-weight: 600;
 }
 .anim-box2 {
@@ -291,13 +297,13 @@ a {
     letter-spacing: 0.01em;
     color: #646464;
     font-size: 60%;
-    font-family: ゴシック;
+    /* font-family: ゴシック; */
 }
 .about-box-text{
     color: #646464;
     font-size: 110%;
     line-height: 1.5;
-    font-family: "ゴシック";
+    /* font-family: "ゴシック"; */
     padding-bottom: 4%;
     margin-bottom: 9%;
 }
@@ -305,7 +311,7 @@ a {
     color: #646464;
     font-size: 115%;
     line-height: 1.5;
-    font-family: "ゴシック";
+    /* font-family: "ゴシック"; */
     padding-bottom: 3%;
 }
 .about-box-desc2 {
@@ -351,7 +357,7 @@ a {
     color: #646464;
     font-size: 110%;
     line-height: 1.5;
-    font-family: "ゴシック";
+    /* font-family: "ゴシック"; */
     padding-bottom: 4%;
     margin-bottom: 7%;
 }
@@ -504,7 +510,7 @@ dt {
     border-bottom: solid 1px #c8c8c8;
     padding: 3% 4%;
     font-size: 24px;
-    font-family:  "游ゴシック体";
+    /* font-family:  "游ゴシック体"; */
 }
 dd {
     width: 75%;
@@ -512,8 +518,8 @@ dd {
     padding: 3% 4%;
     line-height: 2;
     font-size: 24px;
-    font-family:  "游ゴシック体";
-    font-family: Medium;
+    /* font-family:  "游ゴシック体"; */
+    /* font-family: Medium; */
 }
 .dd-text{
     display: flex;
@@ -1045,6 +1051,10 @@ footer p{
         font-size:16px;
     }
     
+	.mv2{
+
+    height: 867px;
+    }
     
 
     .service-heading-title, .company-heading-title {
